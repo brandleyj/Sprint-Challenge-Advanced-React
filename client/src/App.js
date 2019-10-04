@@ -6,7 +6,7 @@ class App extends React.Component {
 	constructor() {
 		super();
 		this.state = {
-			users: []
+			players: []
 		};
 	}
 
@@ -14,7 +14,7 @@ class App extends React.Component {
 		axios.get("http://localhost:5000/api/players").then(res => {
 			console.log(res.data);
 			this.setState({
-				users: [...this.state.users, res.data]
+				players: [...this.state.players, res.data]
 			});
 		});
 	}
