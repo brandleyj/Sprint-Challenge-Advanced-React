@@ -9,7 +9,7 @@ const PlayerCard = props => {
 				<p>{props.id}</p>
 			</span>
 			<span>
-				<p>{props.searches}</p>
+				<p>Searches: {props.searches}</p>
 			</span>
 		</div>
 	);

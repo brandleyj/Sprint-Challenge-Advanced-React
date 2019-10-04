@@ -8,7 +8,7 @@ const Navbar = () => {
 		setDarkMode(!darkMode);
 	};
 	return (
-		<nav className="navbar">
+		<nav id="navbar">
 			<h1>Women's World Cup Players</h1>
 			<div className="dark-mode__toggle">
 				<div
