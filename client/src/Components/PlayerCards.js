@@ -1,18 +1,22 @@
-import React, { Component } from "react";
-import PLayerCard from "./PlayerCard";
+import React from "react";
+import PlayerCard from "./PlayerCard";
 
-class PlayerCards extends Component {
-	render() {
-		console.log("this.props", this.props);
-		const { players } = this.props;
-		return (
-			<div>
-				{players.map(player => (
-					<PLayerCard player={player} />
-				))}
-			</div>
-		);
-	}
+function PlayerCards(props) {
+	console.log("playercards", props);
+	return (
+		<div>
+			{props.players.map(player => {
+				return (
+					<PlayerCard
+						name={player.name}
+						country={player.country}
+						id={player.id}
+						searches={player.searches}
+					/>
+				);
+			})}
+		</div>
+	);
 }
 
 export default PlayerCards;

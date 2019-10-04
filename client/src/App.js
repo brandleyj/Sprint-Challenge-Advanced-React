@@ -16,9 +16,9 @@ class App extends React.Component {
 		axios
 			.get("http://localhost:5000/api/players")
 			.then(res => {
-				// console.log(res.data);
+				console.log(res.data);
 				this.setState({
-					players: [...this.state.players, res.data]
+					players: [res.data]
 				});
 			})
 			.catch(err => console.log(err));
