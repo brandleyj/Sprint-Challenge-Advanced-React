@@ -3,6 +3,7 @@ import PLayerCard from "./PlayerCard";
 
 class PlayerCards extends Component {
 	render() {
+		console.log("this.props", this.props);
 		const { players } = this.props;
 		return (
 			<div>
@@ -13,3 +14,5 @@ class PlayerCards extends Component {
 		);
 	}
 }
+
+export default PlayerCards;

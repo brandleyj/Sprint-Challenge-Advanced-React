@@ -1,6 +1,8 @@
 import React from "react";
 import "./App.css";
 import axios from "axios";
+import PlayerCards from "./Components/PlayerCards";
+import NavBar from "./Components/NavBar";
 
 class App extends React.Component {
 	constructor() {
@@ -11,18 +13,22 @@ class App extends React.Component {
 	}
 
 	componentDidMount() {
-		axios.get("http://localhost:5000/api/players").then(res => {
-			console.log(res.data);
-			this.setState({
-				players: [...this.state.players, res.data]
-			});
-		});
+		axios
+			.get("http://localhost:5000/api/players")
+			.then(res => {
+				// console.log(res.data);
+				this.setState({
+					players: [...this.state.players, res.data]
+				});
+			})
+			.catch(err => console.log(err));
 	}
 
 	render() {
 		return (
 			<div>
-				<p>hello</p>
+				<NavBar />
+				<PlayerCards players={this.state.players} />
 			</div>
 		);
 	}
