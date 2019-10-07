@@ -24,8 +24,20 @@ Demonstrate your understanding of this Sprint's concepts by answering the follow
 
 - [ ] Why would you use class component over function components (removing hooks from the question)?
 - [ ] Name three lifecycle methods and their purposes.
+
+componentDidMount- This is where you need to load data
+
+render- Returns the JSX of your component
+
+componentWillUnmount- This is where you make any last minute requests such as removing all event listeners.
+
 - [ ] What is the purpose of a custom hook?
+
+They are reusable
+
 - [ ] Why is it important to test our apps?
+
+You want to break your code in test to make sure it's working right.
 
 ## Project Set Up
 
@@ -44,7 +56,7 @@ Follow these steps to set up and work on your project:
 
 Follow these steps for completing your project:
 
-- [ ] Submit a Pull-Request to merge <firstName-lastName> Branch into master (student's  Repo).
+- [ ] Submit a Pull-Request to merge <firstName-lastName> Branch into master (student's Repo).
 - [ ] Add your Project Manager as a Reviewer on the Pull-request.
 - [ ] PM then will count the HW as done by merging the branch back into master.
 
